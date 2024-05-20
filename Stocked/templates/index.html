@@ -1,0 +1,9 @@
+{% extends 'Home.html' %}
+
+{% block content %}
+      <div class="card mb-3">
+        {% if PageName != '' %}
+            {% include 'includes/Categories.html' %}
+        {% endif %}
+      </div>
+{% endblock content %}

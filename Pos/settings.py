@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'Core.apps.CoreConfig'
+    'Core.apps.CoreConfig',
+    'Stocked.apps.StockedConfig'
 ]
 
 MIDDLEWARE = [
@@ -55,7 +56,8 @@ ROOT_URLCONF = 'Pos.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR,'Core/')],
+        'DIRS': [os.path.join(BASE_DIR,'Core/templates'),
+                 os.path.join(BASE_DIR,'Stocked/templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

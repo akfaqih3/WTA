@@ -2,12 +2,41 @@
 <!DOCTYPE html>
 <html lang="en">
     {% include 'includes/head.html' %}
-<body>
+<body class="overflow-hidden">
     {% include 'includes/header.html' %}
 
-    {% include 'includes/sidebar.html' %}
+    <div id="wrapper">
+        <!-- Sidebar -->
+        {% include 'includes/sidebar.html' %}
 
-
+        <div id="content-wrapper">
+            <div class="container-fluid">
+                <!-- Breadcrumbs-->
+                <ol class="breadcrumb">
+                    {% for k in Breadcrumbs %}
+                        <li class="breadcrumb-item active">{{k}}</li>
+                    {% endfor %}
+                </ol>
+                <div class="card mb-3">
+                    {% if PageName != '' %}
+                        <div class="card-header bg-primary text-white">
+                            <i class="fa fa-table"></i>
+                            {{PageName}}
+                            <a href="#" class="text-white" data-toggle="modal" data-target="#addProductModal">
+                            <span class="float-right">
+                                <i class="fa fa-plus"></i>
+                                Add New {{PageName}}
+                            </span>
+                            </a>
+                        </div>
+                    {% endif %}
+                    {% block content %}
+                        
+                    {% endblock content %}
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="{% static 'js/jquery.min.js' %}"></script>
     <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
     <script src="{% static 'js/jquery.easing.min.js' %}"></script>
