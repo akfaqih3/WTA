@@ -1,8 +1,7 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
     {% include 'includes/head.html' %}
-<body class="overflow-hidden">
+<body>
     {% include 'includes/header.html' %}
 
     <div id="wrapper">
@@ -22,7 +21,7 @@
                         <div class="card-header bg-primary text-white">
                             <i class="fa fa-table"></i>
                             {{PageName}}
-                            <a href="#" class="text-white" data-toggle="modal" data-target="#addProductModal">
+                            <a href="#" class="text-white" data-toggle="modal" data-target="{{New}}">
                             <span class="float-right">
                                 <i class="fa fa-plus"></i>
                                 Add New {{PageName}}
@@ -37,11 +36,9 @@
             </div>
         </div>
     </div>
-    <script src="{% static 'js/jquery.min.js' %}"></script>
-    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
-    <script src="{% static 'js/jquery.easing.min.js' %}"></script>
-    <script src="{% static 'js/chart.min.js' %}"></script>
-    <script src="{% static 'js/rc-pos.min.js' %}"></script>
-    <script src="{% static 'js/chart-area-demo.js' %}"></script>
+
+    {% include 'includes/dialog.html' %}
+    
+    {% include 'includes/scripts.html' %}
 </body>
 </html>

@@ -1,0 +1,303 @@
+ <!-- Logout Modal-->
+ <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header bg-danger text-white">
+          <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+          <button class="close text-white" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+          <a class="btn btn-danger" href="login.html">Logout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- New Store Modal -->
+  <div class="modal fade" id="NewStoreModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title" id="exampleModalLabel">
+                    <i class="fa fa-plus"></i>
+                    New Store
+                </h5>
+                <button class="close text-white" type="button" data-dismiss="modal" aria-label="close"> 
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <form action="">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="Store_name">Store Name</label>
+                        <input type="text" name="Store_name" id="Store_name" class="form-control" placeholder="Store Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="Store_location">Store location</label>
+                        <input type="text" name="Store_location" id="Store_location" class="form-control" placeholder="Store Location">
+                    </div>
+                    <div class="form-group">
+                        <label for="Store_note">Note <small class="text-muted">(Optional)</small></label>
+                        <textarea class="form-control" name="Store_note"  id="Store_note" rows="8" cols="80" placeholder="Add some note or description about this store..."></textarea>
+                    </div>
+                    <small class="text-muted"><em>Please double check information before submitting.</em></small>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">
+                        Cancel
+                    </button>
+                    <input type="submit" value="Add Store" class="btn btn-primary">
+                </div>
+            </form>
+        </div>
+    </div>
+  </div>
+  <!-- New Brand Model-->
+  <div class="modal fade" id="NewBrandModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header bg-primary text-white">
+          <h5 class="modal-title" id="exampleModalLabel">
+            <i class="fa fa-industry"></i>
+            New Brand
+          </h5>
+          <button class="close text-white" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <form class="">
+          <div class="modal-body">
+            <div class="form-group">
+              <label for="">Brand Name</label>
+              <input type="text" class="form-control" name="Brand_name" value="Brand_name" placeholder="Enter brand name here..." required>
+              <small class="text-muted">Example: Samsung, Nokia or Apple etc</small>
+            </div>
+            <div class="form-group">
+              <label for="">Note<small class="text-muted">(Optional)</small></label>
+              <textarea name="name" class="form-control" rows="8" cols="80" placeholder="Add some note or description about this vendor..."></textarea>
+            </div>
+            <small class="text-muted"><em>Please double check information before submitting.</em></small>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+            <input type="submit" class="btn btn-primary" value="Add Brand">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+<!-- New Category Modal -->
+  <div class="modal fade" id="NewCategoryModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title" id="exampleModalLabel">
+                    <i class="fa fa-plus"></i>
+                    New Category
+                </h5>
+                <button class="close text-white" type="button" data-dismiss="modal" aria-label="close"> 
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <form action="">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="Unit_name">Category Name</label>
+                        <input type="text" name="Category_name" id="Category_name" class="form-control" placeholder="Category Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="Brand_type">Brand type</label>
+                        <select class="form-control text-primary" id="Brand_type" name="Brand_type" required>
+                          <option disabled selected><sub>Please select a product type</sub></option>
+                          <option>Speakers</option>
+                          <option>Card Readers</option>
+                          <option>Headphones & MICs</option>
+                          <option>Mousepads</option>
+                          <option>Mice &amp; Pointing Devices</option>
+                          <option>Display Monitors</option>
+                          <option>Keyboards</option>
+                          <option>Cables & Chargers</option>
+                          <option>Power Supplies</option>
+                        </select>
+                        <small class="float-right">Brand not listed here? <a href="#"data-toggle="modal" data-target="#NewBrandModel">Add new</a></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="Store_note">Note <small class="text-muted">(Optional)</small></label>
+                        <textarea class="form-control" name="Store_note"  id="Store_note" rows="8" cols="80" placeholder="Add some note or description about this store..."></textarea>
+                    </div>
+                    <small class="text-muted"><em>Please double check information before submitting.</em></small>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">
+                        Cancel
+                    </button>
+                    <input type="submit" value="Add Store" class="btn btn-primary">
+                </div>
+            </form>
+        </div>
+    </div>
+  </div>
+<!-- New Unit Modal -->
+  <div class="modal fade" id="NewUnitModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title" id="exampleModalLabel">
+                    <i class="fa fa-plus"></i>
+                    New Unit
+                </h5>
+                <button class="close text-white" type="button" data-dismiss="modal" aria-label="close"> 
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <form action="">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="Unit_name">Unite Name</label>
+                        <input type="text" name="Unit_name" id="Unit_name" class="form-control" placeholder="Unite Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="Unit_code">Unit Code</label>
+                        <input type="text" name="Unit_code" id="Unit_code" class="form-control" placeholder="Unit Code">
+                        <small class="text-muted">Example: Kg, Mm or L etc</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="Store_note">Note <small class="text-muted">(Optional)</small></label>
+                        <textarea class="form-control" name="Store_note"  id="Store_note" rows="8" cols="80" placeholder="Add some note or description about this store..."></textarea>
+                    </div>
+                    <small class="text-muted"><em>Please double check information before submitting.</em></small>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">
+                        Cancel
+                    </button>
+                    <input type="submit" value="Add Store" class="btn btn-primary">
+                </div>
+            </form>
+        </div>
+    </div>
+  </div>
+  <!-- New Product Model -->
+  <div class="modal fade h-100 overflow-hidden pb-4" id="NewProductModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg h-100 overflow-hidden" role="document">
+      <div class="modal-content h-100 overflow-hidden"> 
+        <div class="modal-header bg-primary text-white">
+          <h5 class="modal-title" id="exampleModalLabel">
+            <i class="fa fa-plus"></i>
+            New Product
+        </h5>
+        <button class="close text-white" type="button" data-dismiss="modal" aria-label="close"> 
+            <span aria-hidden="true">×</span>
+        </button>
+        </div>
+        <form action="" class="h-100 overflow-auto">
+          <div class="modal-body">
+            <div class="form-group">
+                <label for="Unit_name">Product Name</label>
+                <input type="text" name="Product_name" id="Product_name" class="form-control" placeholder="Product Name">
+            </div>
+            <div class="form-group">
+                <label for="Product_code">Code</label>
+                <input type="text" name="Product_code" id="Product_code" class="form-control" placeholder="Product Code">
+                <small class="text-muted">IMEI</small>
+            </div>
+            <div class="form-group">
+                <label for="Barcode">Barcode</label>
+                <input type="text" name="Barcode" id="Barcode" class="form-control" placeholder="Barcode">
+                <small class="text-muted">IMEI</small>
+            </div>
+            <div class="form-group">
+              <label for="Brand_type">Brand type</label>
+              <select class="form-control text-primary" id="Brand_type" name="Brand_type" required>
+                <option disabled selected><sub>Please select a product type</sub></option>
+                <option>Speakers</option>
+                <option>Card Readers</option>
+                <option>Headphones & MICs</option>
+                <option>Mousepads</option>
+                <option>Mice &amp; Pointing Devices</option>
+                <option>Display Monitors</option>
+                <option>Keyboards</option>
+                <option>Cables & Chargers</option>
+                <option>Power Supplies</option>
+              </select>
+              <small class="float-right">Brand not listed here? <a href="#"data-toggle="modal" data-target="#NewBrandModel">Add new</a></small>
+            </div>
+            <div class="form-group">
+              <label for="Category">Category type</label>
+              <select class="form-control text-primary" id="Category" name="Category" required>
+                <option disabled selected><sub>Please select a Category</sub></option>
+                <option>Speakers</option>
+                <option>Card Readers</option>
+                <option>Headphones & MICs</option>
+                <option>Mousepads</option>
+                <option>Mice &amp; Pointing Devices</option>
+                <option>Display Monitors</option>
+                <option>Keyboards</option>
+                <option>Cables & Chargers</option>
+                <option>Power Supplies</option>
+              </select>
+              <small class="float-right">Category not listed here? <a href="#"data-toggle="modal" data-target="#NewCategoryModal">Add new</a></small>
+            </div>
+            <div class="form-group">
+              <label for="Purchase_price">Purchase Price</label>
+              <input type="number" class="form-control" name="Purchase_price" value="Purchase_price" placeholder="Enter Purchase price here..." required>
+            </div>
+            <div class="form-group">
+              <label for="Sale_price">Sale Price</label>
+              <input type="number" class="form-control" name="Sale_price" value="Sale_price" placeholder="Enter Sale price here..." required>
+            </div>
+            <div class="form-group">
+              <label for="Purchase_unit">Purchase Unit</label>
+              <select class="form-control text-primary" id="Purchase_unit" name="Purchase_unit" required>
+                <option disabled selected><sub>Please select a Unit</sub></option>
+                <option>Speakers</option>
+                <option>Card Readers</option>
+                <option>Headphones & MICs</option>
+                <option>Mousepads</option>
+                <option>Mice &amp; Pointing Devices</option>
+                <option>Display Monitors</option>
+                <option>Keyboards</option>
+                <option>Cables & Chargers</option>
+                <option>Power Supplies</option>
+              </select>
+              <small class="float-right">Unit not listed here? <a href="#"data-toggle="modal" data-target="#NewUnitModal">Add new</a></small>
+            </div>
+            <div class="form-group">
+              <label for="Sale_unit">Sale Unit</label>
+              <select class="form-control text-primary" id="Sale_unit" name="Sale_unit" required>
+                <option disabled selected><sub>Please select a Unit</sub></option>
+                <option>Speakers</option>
+                <option>Card Readers</option>
+                <option>Headphones & MICs</option>
+                <option>Mousepads</option>
+                <option>Mice &amp; Pointing Devices</option>
+                <option>Display Monitors</option>
+                <option>Keyboards</option>
+                <option>Cables & Chargers</option>
+                <option>Power Supplies</option>
+              </select>
+              <small class="float-right">Unit not listed here? <a href="#"data-toggle="modal" data-target="#NewUnitModal">Add new</a></small>
+            </div>
+            <div class="form-group">
+                <label for="image">Image<small class="text-muted">(Optional)</small></label>
+                <input type="file" name="image" id="image" class="form-control-file">
+            </div>
+            <div class="form-group">
+                <label for="Store_note">Note <small class="text-muted">(Optional)</small></label>
+                <textarea class="form-control" name="Store_note"  id="Store_note" rows="8" cols="80" placeholder="Add some note or description about this store..."></textarea>
+            </div>
+            <small class="text-muted"><em>Please double check information before submitting.</em></small>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-secondary" type="button" data-dismiss="modal">
+                Cancel
+            </button>
+            <input type="submit" value="Add Store" class="btn btn-primary">
+        </div>
+        </form>
+      </div>
+    </div>
+  </div>
