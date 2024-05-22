@@ -33,20 +33,20 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="StoresDropdown">
           <h6 class="dropdown-header">Stores</h6>
-          <a class="dropdown-item" href="Stocked" data-toggle="modal" data-target="#NewStoreModal"> <i class="fa fa-plus"></i> Add Store</a>
-          <a class="dropdown-item" href="{% url 'Stores' %}"> <i class="fa fa-tags"></i> All Store</a>
+          <a class="dropdown-item" href="Stocked" data-toggle="modal" data-target="#NewStoresModal"> <i class="fa fa-plus"></i> Add Store</a>
+          <a class="dropdown-item" href="{% url 'Stocked' 'Stores' %}"> <i class="fa fa-tags"></i> All Store</a>
           <div class="dropdown-divider"></div>
           <h6 class="dropdown-header">Categories</h6>
-          <a class="dropdown-item" href="#" data-toggle="modal" data-target="#NewCategoryModal"> <i class="fa fa-plus"></i> Add Category</a>
-          <a class="dropdown-item" href="{% url 'Categories' %}"> <i class="fa fa-tags"></i> All Categories</a>
-          <a class="dropdown-item" href="{% url 'Brands' %}"> <i class="fa fa-tags"></i> Brands</a>
+          <a class="dropdown-item" href="#" data-toggle="modal" data-target="#NewCategoriesModal"> <i class="fa fa-plus"></i> Add Category</a>
+          <a class="dropdown-item" href="{% url 'Stocked' 'Categories' %}"> <i class="fa fa-tags"></i> All Categories</a>
+          <a class="dropdown-item" href="{% url 'Stocked' 'Brands' %}"> <i class="fa fa-tags"></i> Brands</a>
           <div class="dropdown-divider"></div>
           <h6 class="dropdown-header">Units &amp; Units</h6>
-          <a class="dropdown-item" href="#" data-toggle="modal" data-target="#NewUnitModal"> <i class="fa fa-plus"></i> Add Unit</a>
-          <a class="dropdown-item" href="{% url 'Units' %}"> <i class="fa fa-tags"></i> All Units</a>
+          <a class="dropdown-item" href="#" data-toggle="modal" data-target="#NewUnitsModal"> <i class="fa fa-plus"></i> Add Unit</a>
+          <a class="dropdown-item" href="{% url 'Stocked' 'Units' %}"> <i class="fa fa-tags"></i> All Units</a>
           <h6 class="dropdown-header">Products</h6>
-          <a class="dropdown-item" href="#" data-toggle="modal" data-target="#NewProductModal"> <i class="fa fa-user"></i> Add Product</a>
-          <a class="dropdown-item" href="{% url 'Products' %}"> <i class="fa fa-tags"></i> All Products</a>
+          <a class="dropdown-item" href="#" data-toggle="modal" data-target="#NewProductsModal"> <i class="fa fa-user"></i> Add Product</a>
+          <a class="dropdown-item" href="{% url 'Stocked' 'Products' %}"> <i class="fa fa-tags"></i> All Products</a>
         </div>
     </li>
     <li class="nav-item">
