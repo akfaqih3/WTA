@@ -29,22 +29,24 @@
                     <span aria-hidden="true">×</span>
                 </button>
             </div>
-            <form action="">
-                <div class="modal-body">
+            <form action="{% url 'Stocked:create' 'Stores' %}" method="POST">
+              {% csrf_token %}
+              {{Forms.Store}}
+                <!-- <div class="modal-body">locations
                     <div class="form-group">
-                        <label for="Store_name">Store Name</label>
-                        <input type="text" name="Store_name" id="Store_name" class="form-control" placeholder="Store Name">
+                        <label for="name">Store Name</label>
+                        <input type="text" name="name" id="name" class="form-control" placeholder="Store Name">
                     </div>
                     <div class="form-group">
-                        <label for="Store_location">Store location</label>
-                        <input type="text" name="Store_location" id="Store_location" class="form-control" placeholder="Store Location">
+                        <label for="locations">Store location</label>
+                        <input type="text" name="locations" id="locations" class="form-control" placeholder="Store Location">
                     </div>
                     <div class="form-group">
-                        <label for="Store_note">Note <small class="text-muted">(Optional)</small></label>
-                        <textarea class="form-control" name="Store_note"  id="Store_note" rows="8" cols="80" placeholder="Add some note or description about this store..."></textarea>
+                        <label for="note">Note <small class="text-muted">(Optional)</small></label>
+                        <textarea class="form-control" name="note"  id="note" rows="8" cols="80" placeholder="Add some note or description about this store..."></textarea>
                     </div>
                     <small class="text-muted"><em>Please double check information before submitting.</em></small>
-                </div>
+                </div> -->
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">
                         Cancel

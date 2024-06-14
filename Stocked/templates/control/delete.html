@@ -1,0 +1,24 @@
+{% extends 'Stocked.html' %}
+{% block content %}
+    <form action="" method="POST" class="card">
+        <div class="card-header">
+            <h2 class="text-danger card-title">Are you sure to delete?</h2>
+        </div>
+        <div class="card-body">
+            {% csrf_token %}
+        <table class="table table-bordered">
+            <tr>
+                <td>{{object.pk}}</td>
+                <td>{{object.name}}</td>
+                <td>{{object.location}}</td>
+                <td>{{object.note}}</td>
+            </tr>
+        </table>
+        </div>
+        <div class="d-flex justify-content-around card-footer">
+            <button type="submit" class="btn btn-danger">Delete</button>
+            <a class="btn btn-outline-info" href="{{ CancelUrl }}">Cancel</a>
+        </div>
+    </form>
+
+{% endblock content %}

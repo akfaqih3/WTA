@@ -33,9 +33,9 @@
           <i class="fa fa-flash fa-fw"></i>
         </a>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="messagesDropdown">
-          <a class="dropdown-item" href="{% url 'Stocked' 'Products' %}"> <i class="fa fa-tag"></i> All Products</a>
-          <a class="dropdown-item" href="{% url 'Stocked' 'Categories' %}"> <i class="fa fa-tags"></i> All Categories</a>
-          <a class="dropdown-item" href="{% url 'Stocked' 'Stores' %}"> <i class="fa fa-tags"></i> All Stores</a>
+          <a class="dropdown-item" href="{% url 'Stocked:Stocked' 'Products' %}"> <i class="fa fa-tag"></i> All Products</a>
+          <a class="dropdown-item" href="{% url 'Stocked:Stocked' 'Categories' %}"> <i class="fa fa-tags"></i> All Categories</a>
+          <a class="dropdown-item" href="{% url 'Stocked:Stocked' 'Stores' %}"> <i class="fa fa-tags"></i> All Stores</a>
         </div>
       </li>
       <li class="nav-item dropdown no-arrow ml-3">

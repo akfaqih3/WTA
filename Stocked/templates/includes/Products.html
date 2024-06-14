@@ -1,7 +1,8 @@
 
 <div class="card-body">
   <div class="table-responsive">
-    <table class="table table-bordered " id="dataTable" width="100%" cellspacing="0">
+    {% if object_list %}
+    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
       <thead>
         <tr>
           <th>PID</th>
@@ -16,6 +17,7 @@
           <th>Sale unit</th>
           <th>Note</th>
           <th>image</th>
+          <th>control</th>
         </tr>
       </thead>
       <tfoot>
@@ -32,193 +34,37 @@
           <th>Sale unit</th>
           <th>Note</th>
           <th>image</th>
+          <th>control</th>
         </tr>
       </tfoot>
       <tbody>
-        <tr>
-          <td>054681</td>
-          <td>A4-Tech Mouse M60</td>
-          <td>Mouse &amp; Pointing Devices</td>
-          <td>A4-Tech</td>
-          <td>6</td>
-          <td>Rs840</td>
-          <td>Rs5040</td>
-          <td>Rs1370</td>
-          <td>Rs5040</td>
-          <td>Rs1370</td>
-          <td>Rs5040</td>
-          <td>Rs1370</td>
-        </tr>
-        <tr>
-          <td>054681</td>
-          <td>A4-Tech Mouse M60</td>
-          <td>Mouse &amp; Pointing Devices</td>
-          <td>A4-Tech</td>
-          <td>6</td>
-          <td>Rs840</td>
-          <td>Rs5040</td>
-          <td>Rs1370</td>
-          <td>Rs5040</td>
-          <td>Rs1370</td>
-          <td>Rs5040</td>
-          <td>Rs1370</td>
-        </tr>
-        <tr>
-          <td>054681</td>
-          <td>A4-Tech Mouse M60</td>
-          <td>Mouse &amp; Pointing Devices</td>
-          <td>A4-Tech</td>
-          <td>6</td>
-          <td>Rs840</td>
-          <td>Rs5040</td>
-          <td>Rs1370</td>
-          <td>Rs5040</td>
-          <td>Rs1370</td>
-          <td>Rs5040</td>
-          <td>Rs1370</td>
-        </tr>
-        <tr>
-          <td>054681</td>
-          <td>A4-Tech Mouse M60</td>
-          <td>Mouse &amp; Pointing Devices</td>
-          <td>A4-Tech</td>
-          <td>6</td>
-          <td>Rs840</td>
-          <td>Rs5040</td>
-          <td>Rs1370</td>
-          <td>Rs5040</td>
-          <td>Rs1370</td>
-          <td>Rs5040</td>
-          <td>Rs1370</td>
-        </tr>
-        <tr>
-          <td>054681</td>
-          <td>A4-Tech Mouse M60</td>
-          <td>Mouse &amp; Pointing Devices</td>
-          <td>A4-Tech</td>
-          <td>6</td>
-          <td>Rs840</td>
-          <td>Rs5040</td>
-          <td>Rs1370</td>
-          <td>Rs5040</td>
-          <td>Rs1370</td>
-          <td>Rs5040</td>
-          <td>Rs1370</td>
-        </tr>
-        <tr>
-          <td>054681</td>
-          <td>A4-Tech Mouse M60</td>
-          <td>Mouse &amp; Pointing Devices</td>
-          <td>A4-Tech</td>
-          <td>6</td>
-          <td>Rs840</td>
-          <td>Rs5040</td>
-          <td>Rs1370</td>
-          <td>Rs5040</td>
-          <td>Rs1370</td>
-          <td>Rs5040</td>
-          <td>Rs1370</td>
-        </tr>
-        <tr>
-          <td>054681</td>
-          <td>A4-Tech Mouse M60</td>
-          <td>Mouse &amp; Pointing Devices</td>
-          <td>A4-Tech</td>
-          <td>6</td>
-          <td>Rs840</td>
-          <td>Rs5040</td>
-          <td>Rs1370</td>
-          <td>Rs5040</td>
-          <td>Rs1370</td>
-          <td>Rs5040</td>
-          <td>Rs1370</td>
-        </tr>
-        <tr>
-          <td>054681</td>
-          <td>A4-Tech Mouse M60</td>
-          <td>Mouse &amp; Pointing Devices</td>
-          <td>A4-Tech</td>
-          <td>6</td>
-          <td>Rs840</td>
-          <td>Rs5040</td>
-          <td>Rs1370</td>
-          <td>Rs5040</td>
-          <td>Rs1370</td>
-          <td>Rs5040</td>
-          <td>Rs1370</td>
-        </tr>
-        <tr>
-          <td>054681</td>
-          <td>A4-Tech Mouse M60</td>
-          <td>Mouse &amp; Pointing Devices</td>
-          <td>A4-Tech</td>
-          <td>6</td>
-          <td>Rs840</td>
-          <td>Rs5040</td>
-          <td>Rs1370</td>
-          <td>Rs5040</td>
-          <td>Rs1370</td>
-          <td>Rs5040</td>
-          <td>Rs1370</td>
-        </tr>
-        <tr>
-          <td>054681</td>
-          <td>A4-Tech Mouse M60</td>
-          <td>Mouse &amp; Pointing Devices</td>
-          <td>A4-Tech</td>
-          <td>6</td>
-          <td>Rs840</td>
-          <td>Rs5040</td>
-          <td>Rs1370</td>
-          <td>Rs5040</td>
-          <td>Rs1370</td>
-          <td>Rs5040</td>
-          <td>Rs1370</td>
-        </tr>
-        <tr>
-          <td>054681</td>
-          <td>A4-Tech Mouse M60</td>
-          <td>Mouse &amp; Pointing Devices</td>
-          <td>A4-Tech</td>
-          <td>6</td>
-          <td>Rs840</td>
-          <td>Rs5040</td>
-          <td>Rs1370</td>
-          <td>Rs5040</td>
-          <td>Rs1370</td>
-          <td>Rs5040</td>
-          <td>Rs1370</td>
-        </tr>
-        <tr>
-          <td>054681</td>
-          <td>A4-Tech Mouse M60</td>
-          <td>Mouse &amp; Pointing Devices</td>
-          <td>A4-Tech</td>
-          <td>6</td>
-          <td>Rs840</td>
-          <td>Rs5040</td>
-          <td>Rs1370</td>
-          <td>Rs5040</td>
-          <td>Rs1370</td>
-          <td>Rs5040</td>
-          <td>Rs1370</td>
-        </tr>
-        <tr>
-          <td>054681</td>
-          <td>A4-Tech Mouse M60</td>
-          <td>Mouse &amp; Pointing Devices</td>
-          <td>A4-Tech</td>
-          <td>6</td>
-          <td>Rs840</td>
-          <td>Rs5040</td>
-          <td>Rs1370</td>
-          <td>Rs5040</td>
-          <td>Rs1370</td>
-          <td>Rs5040</td>
-          <td>Rs1370</td>
-        </tr>
+        {% for object in object_list %}
+          <tr>
+            <td>{{object.pk}}</td>
+            <td>{{object.name}}</td>
+            <td>{{object.code}}</td>
+            <td>{{object.barcode}}</td>
+            <td>{{object.category.brand}}</td>
+            <td>{{object.category}}</td>
+            <td>{{object.purchase_price}}</td>
+            <td>{{object.sale_price}}</td>
+            <td>{{object.purchase_unit}}</td>
+            <td>{{object.sale_unit}}</td>
+            <td>{{object.note}}</td>
+            <td><img src="{{ object.image.url }}" width="32" height="32" alt=""></td>
+            <td>
+              <div class="d-flex justify-content-around">
+                <a class="btn btn-sm btn-outline-info" href="{% url 'Stocked:update' 'Products' object.pk %}">update</a>
+                <a class="btn btn-sm btn-outline-danger" href="{% url 'Stocked:delete' 'Products' object.pk %}">delete</a>
+              </div>
+            </td>Products
+          </tr>
+        {%  endfor %}
       </tbody>
     </table>
+    {% else %}
+      <p>No {{template}}!!!</p>
+    {% endif %}
   </div>
 </div>
 <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>

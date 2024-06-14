@@ -12,19 +12,20 @@
             <div class="container-fluid">
                 <!-- Breadcrumbs-->
                 <ol class="breadcrumb">
-                    {% for k in Breadcrumbs %}
-                        <li class="breadcrumb-item active">{{k}}</li>
+                    {% for path in Breadcrumbs %}
+                        <li class="breadcrumb-item active">{{path}}</li>
                     {% endfor %}
                 </ol>
                 <div class="card mb-3">
-                    {% if PageName != '' %}
+                    {% if template != '' %}
                         <div class="card-header bg-primary text-white">
                             <i class="fa fa-table"></i>
-                            {{PageName}}
-                            <a href="#" class="text-white" data-toggle="modal" data-target="{{New}}">
+                            {{template}}
+                            {% url 'Stocked:create' template as the_url %}
+                            <a href="{{the_url}}" class="text-white">
                             <span class="float-right">
                                 <i class="fa fa-plus"></i>
-                                Add New {{PageName}}
+                                Add New {{template}}
                             </span>
                             </a>
                         </div>

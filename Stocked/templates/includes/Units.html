@@ -1,6 +1,7 @@
 
 <div class="card-body">
   <div class="table-responsive">
+    {% if object_list %}
     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
       <thead>
         <tr>
@@ -8,6 +9,7 @@
           <th>Unit Name</th>
           <th>Unit Code</th>
           <th>Note</th>
+          <th>Control</th>
         </tr>
       </thead>
       <tfoot>
@@ -16,40 +18,28 @@
           <th>Unit Name</th>
           <th>Unit Code</th>
           <th>Note</th>
+          <th>Control</th>
       </tfoot>
       <tbody>
-        <tr>
-          <td>054681</td>
-          <td>A4-Tech Mouse M60</td>
-          <td>Mouse &amp; Pointing Devices</td>
-          <td>A4-Tech</td>
-        </tr>
-        <tr>
-          <td>054681</td>
-          <td>A4-Tech Mouse M60</td>
-          <td>Mouse &amp; Pointing Devices</td>
-          <td>A4-Tech</td>
-        </tr>
-        <tr>
-          <td>054681</td>
-          <td>A4-Tech Mouse M60</td>
-          <td>Mouse &amp; Pointing Devices</td>
-          <td>A4-Tech</td>
-        </tr>
-        <tr>
-          <td>054681</td>
-          <td>A4-Tech Mouse M60</td>
-          <td>Mouse &amp; Pointing Devices</td>
-          <td>A4-Tech</td>
-        </tr>
-        <tr>
-          <td>054681</td>
-          <td>A4-Tech Mouse M60</td>
-          <td>Mouse &amp; Pointing Devices</td>
-          <td>A4-Tech</td>
-        </tr>
+        {% for object in object_list %}
+          <tr>
+            <td>{{object.pk}}</td>
+            <td>{{object.name}}</td>
+            <td>{{object.code}}</td>
+            <td>{{object.note}}</td>
+            <td>
+              <div class="d-flex justify-content-around">
+                <a class="btn btn-sm btn-outline-info" href="{% url 'Stocked:update' 'Units' object.pk %}">update</a>
+                <a class="btn btn-sm btn-outline-danger" href="{% url 'Stocked:delete' 'Units' object.pk %}">delete</a>
+              </div>
+            </td>
+          </tr>
+        {%  endfor %}
       </tbody>
     </table>
+    {% else %}
+      <p>No {{template}}!!!</p>
+    {% endif %}
   </div>
   </div>
   <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>

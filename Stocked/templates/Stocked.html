@@ -2,8 +2,8 @@
 
 {% block content %}
       <div class="card mb-3">
-        {% if PageName != '' %}
-          {% include template %}
+        {% if template != '' %}
+          {% include include %}
         {% endif %}
       </div>
 {% endblock content %}
