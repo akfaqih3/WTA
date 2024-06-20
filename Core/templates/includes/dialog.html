@@ -16,81 +16,6 @@
       </div>
     </div>
   </div>
-<!-- New Store Modal -->
-  <div class="modal fade" id="NewStoresModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-            <div class="modal-header bg-primary text-white">
-                <h5 class="modal-title" id="exampleModalLabel">
-                    <i class="fa fa-plus"></i>
-                    New Store
-                </h5>
-                <button class="close text-white" type="button" data-dismiss="modal" aria-label="close"> 
-                    <span aria-hidden="true">×</span>
-                </button>
-            </div>
-            <form action="{% url 'Stocked:create' 'Stores' %}" method="POST">
-              {% csrf_token %}
-              {{Forms.Store}}
-                <!-- <div class="modal-body">locations
-                    <div class="form-group">
-                        <label for="name">Store Name</label>
-                        <input type="text" name="name" id="name" class="form-control" placeholder="Store Name">
-                    </div>
-                    <div class="form-group">
-                        <label for="locations">Store location</label>
-                        <input type="text" name="locations" id="locations" class="form-control" placeholder="Store Location">
-                    </div>
-                    <div class="form-group">
-                        <label for="note">Note <small class="text-muted">(Optional)</small></label>
-                        <textarea class="form-control" name="note"  id="note" rows="8" cols="80" placeholder="Add some note or description about this store..."></textarea>
-                    </div>
-                    <small class="text-muted"><em>Please double check information before submitting.</em></small>
-                </div> -->
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">
-                        Cancel
-                    </button>
-                    <input type="submit" value="Add Store" class="btn btn-primary">
-                </div>
-            </form>
-        </div>
-    </div>
-  </div>
-  <!-- New Brand Model-->
-  <div class="modal fade" id="NewBrandsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
-      <div class="modal-content">
-        <div class="modal-header bg-primary text-white">
-          <h5 class="modal-title" id="exampleModalLabel">
-            <i class="fa fa-industry"></i>
-            New Brand
-          </h5>
-          <button class="close text-white" type="button" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">×</span>
-          </button>
-        </div>
-        <form class="">
-          <div class="modal-body">
-            <div class="form-group">
-              <label for="">Brand Name</label>
-              <input type="text" class="form-control" name="Brand_name" value="Brand_name" placeholder="Enter brand name here..." required>
-              <small class="text-muted">Example: Samsung, Nokia or Apple etc</small>
-            </div>
-            <div class="form-group">
-              <label for="">Note<small class="text-muted">(Optional)</small></label>
-              <textarea name="name" class="form-control" rows="8" cols="80" placeholder="Add some note or description about this vendor..."></textarea>
-            </div>
-            <small class="text-muted"><em>Please double check information before submitting.</em></small>
-          </div>
-          <div class="modal-footer">
-            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-            <input type="submit" class="btn btn-primary" value="Add Brand">
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
 <!-- New Category Modal -->
   <div class="modal fade" id="NewCategoriesModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
@@ -125,46 +50,6 @@
                           <option>Power Supplies</option>
                         </select>
                         <small class="float-right">Brand not listed here? <a href="#"data-toggle="modal" data-target="#NewBrandModel">Add new</a></small>
-                    </div>
-                    <div class="form-group">
-                        <label for="Store_note">Note <small class="text-muted">(Optional)</small></label>
-                        <textarea class="form-control" name="Store_note"  id="Store_note" rows="8" cols="80" placeholder="Add some note or description about this store..."></textarea>
-                    </div>
-                    <small class="text-muted"><em>Please double check information before submitting.</em></small>
-                </div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">
-                        Cancel
-                    </button>
-                    <input type="submit" value="Add Store" class="btn btn-primary">
-                </div>
-            </form>
-        </div>
-    </div>
-  </div>
-<!-- New Unit Modal -->
-  <div class="modal fade" id="NewUnitsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-            <div class="modal-header bg-primary text-white">
-                <h5 class="modal-title" id="exampleModalLabel">
-                    <i class="fa fa-plus"></i>
-                    New Unit
-                </h5>
-                <button class="close text-white" type="button" data-dismiss="modal" aria-label="close"> 
-                    <span aria-hidden="true">×</span>
-                </button>
-            </div>
-            <form action="">
-                <div class="modal-body">
-                    <div class="form-group">
-                        <label for="Unit_name">Unite Name</label>
-                        <input type="text" name="Unit_name" id="Unit_name" class="form-control" placeholder="Unite Name">
-                    </div>
-                    <div class="form-group">
-                        <label for="Unit_code">Unit Code</label>
-                        <input type="text" name="Unit_code" id="Unit_code" class="form-control" placeholder="Unit Code">
-                        <small class="text-muted">Example: Kg, Mm or L etc</small>
                     </div>
                     <div class="form-group">
                         <label for="Store_note">Note <small class="text-muted">(Optional)</small></label>

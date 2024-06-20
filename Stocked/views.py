@@ -2,27 +2,25 @@
 from typing import Any
 from django.db.models.base import Model as Model
 from django.db.models.query import QuerySet
-from django.forms import BaseModelForm
-from django.http import HttpRequest, HttpResponse
-from django.shortcuts import render ,redirect
-from django.views.generic import UpdateView,DeleteView,CreateView
+from django.shortcuts import redirect
+from django.views.generic import UpdateView,DeleteView,CreateView,ListView
 # Create your views here.
 from .utility import *
-from .models import *
 
-def Stocked(request,template_name):
-    model = get_list_by_template_name(template_name)
-    object_lIst = model.objects.all() if model else None
-
-    Context ={'template':template_name,
-              'include':'includes/'+template_name+'.html',
-              'modalName':'#New'+template_name+'Modal',
+class listView(ListView):
+    template_name ='Stocked.html'
+    def get_queryset(self) :
+        model = get_list_by_template_name(self.kwargs['template_name'])
+        return model.objects.all()
+    
+    def get_context_data(self):
+        template_name = self.kwargs['template_name']
+        object_lIst = self.get_queryset()
+        Context ={'template':template_name,
               'Breadcrumbs':['Stock',template_name],
               'object_list' : object_lIst}
+        return Context
     
-
-    return render(request,'Stocked.html',Context)
-
 class createView(CreateView):
     fields = '__all__'
     template_name = 'control/create.html'
@@ -35,8 +33,6 @@ class createView(CreateView):
         form.save()
         template = self.kwargs['template_name']
         return redirect(f'http://127.0.0.1:8000/Stocked/{template}')
-    
-   
 
 class updateView(UpdateView):
     fields = '__all__'

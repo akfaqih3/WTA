@@ -43,5 +43,5 @@ class Product(models.Model):
     purchase_unit = models.ForeignKey(Unit,on_delete=models.CASCADE,related_name='parchase_unit')
     sale_unit = models.ForeignKey(Unit,on_delete=models.CASCADE,related_name='sale_unit')
     note = models.TextField(max_length=64)
-    image = models.ImageField(upload_to="pro_images/%y/%m/%d",blank=True,null=True)
+    image = models.ImageField(upload_to="pro_images/%y/%m/%d",default='pro_images/default.png',blank=True)
     

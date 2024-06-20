@@ -3,7 +3,7 @@
 {% block content %}
       <div class="card mb-3">
         {% if template != '' %}
-          {% include include %}
+          {% include 'includes/'|add:template|add:'.html' %}
         {% endif %}
       </div>
 {% endblock content %}
