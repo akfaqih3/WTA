@@ -1,5 +1,53 @@
 {% extends 'Home.html' %}
 
 {% block content %}
-    Accounts block       
+    
+<div class="card-body">
+    <div class="table-responsive">
+        {% if object_list %}
+        <table class="table table-bordered " id="dataTable" width="100%" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Phone</th>
+                    <th>Address</th>
+                    <th>Note</th>
+                    <th>Control</th>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Phone</th>
+                    <th>Address</th>
+                    <th>Note</th>
+                    <th>Control</th>
+                </tr>
+            </tfoot>
+            <tbody>
+                {% for object in object_list %}
+                <tr>
+                    <td>{{object.pk}}</td>
+                    <td>{{object.name}}</td>
+                    <td>{{object.phone}}</td>
+                    <td>{{object.address}}</td>
+                    <td>{{object.note}}</td>
+                    <td>
+                    <div class="d-flex justify-content-around">
+                        <a class="btn btn-sm btn-outline-info" href="{% url 'Accounts:update' template object.pk %}">update</a>
+                        <a class="btn btn-sm btn-outline-danger" href="{% url 'Accounts:delete' template object.pk %}">delete</a>
+                    </div>
+                    </td>
+                </tr>
+                {%  endfor %}
+            </tbody>
+        </table>
+        {% else %}
+        <p>No {{template}}!!!</p>
+          {% endif %}
+    </div>
+  </div>
+  <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>  
 {% endblock content %}

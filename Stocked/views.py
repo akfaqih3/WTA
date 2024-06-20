@@ -17,7 +17,7 @@ class listView(ListView):
         template_name = self.kwargs['template_name']
         object_lIst = self.get_queryset()
         Context ={'template':template_name,
-              'Breadcrumbs':['Stock',template_name],
+              'Breadcrumbs':['Stocked',template_name],
               'object_list' : object_lIst}
         return Context
     

@@ -21,7 +21,7 @@
                         <div class="card-header bg-primary text-white">
                             <i class="fa fa-table"></i>
                             {{template}}
-                            {% url 'Stocked:create' template as the_url %}
+                            {% url Breadcrumbs.0|add:':create' template as the_url %}
                             <a href="{{the_url}}" class="text-white">
                             <span class="float-right">
                                 <i class="fa fa-plus"></i>

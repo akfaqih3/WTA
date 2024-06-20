@@ -16,11 +16,11 @@
         <div class="dropdown-menu" aria-labelledby="StoresDropdown">
           <h6 class="dropdown-header">Customers</h6>
           <a class="dropdown-item" href="#" data-toggle="modal" data-target="#addProductModal"> <i class="fa fa-plus"></i> Add Customer</a>
-          <a class="dropdown-item" href="{% url 'Accounts' 'Customers' %}"> <i class="fa fa-tags"></i> All Customers</a>
+          <a class="dropdown-item" href="{% url 'Accounts:accounts' 'Customers' %}"> <i class="fa fa-tags"></i> All Customers</a>
           <div class="dropdown-divider"></div>
           <h6 class="dropdown-header">Supplyrs</h6>
           <a class="dropdown-item" href="#" data-toggle="modal" data-target="#addProductTypeModal"> <i class="fa fa-plus"></i> Add Supplyr</a>
-          <a class="dropdown-item" href="{% url 'Accounts' 'Suppliers' %}"> <i class="fa fa-tags"></i> All Supplyrs</a>
+          <a class="dropdown-item" href="{% url 'Accounts:accounts' 'Suppliers' %}"> <i class="fa fa-tags"></i> All Supplyrs</a>
         </div>
     </li>
     <li class="nav-item dropdown">
