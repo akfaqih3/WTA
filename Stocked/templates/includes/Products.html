@@ -20,23 +20,6 @@
           <th>control</th>
         </tr>
       </thead>
-      <tfoot>
-        <tr>
-          <th>PID</th>
-          <th>Name</th>
-          <th>Code</th>
-          <th>Barcode</th>
-          <th>Brand</th>
-          <th>Category</th>
-          <th>Purchase price</th>
-          <th>Sale price</th>
-          <th>Purchase unit</th>
-          <th>Sale unit</th>
-          <th>Note</th>
-          <th>image</th>
-          <th>control</th>
-        </tr>
-      </tfoot>
       <tbody>
         {% for object in object_list %}
           <tr>
@@ -50,8 +33,14 @@
             <td>{{object.sale_price}}</td>
             <td>{{object.purchase_unit}}</td>
             <td>{{object.sale_unit}}</td>
-            <td>{{object.note}}</td>
-            <td><img src="{{ object.image.url }}" width="32" height="32" alt=""></td>
+            <td>{{object.note|truncatechars_html:14}}</td>
+            <td>
+              {% if object.image %}
+                <img src="{{ object.image.url }}" width="32" height="32" alt="">
+              {% else %}
+                <p>No image</p>
+              {% endif %}
+            </td>
             <td>
               <div class="d-flex justify-content-around">
                 <a class="btn btn-sm btn-outline-info" href="{% url 'Stocked:update' 'Products' object.pk %}">update</a>
