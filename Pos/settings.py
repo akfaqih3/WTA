@@ -41,7 +41,8 @@ INSTALLED_APPS = [
 
 
     'Stocked.apps.StockedConfig',
-    'Accounts.apps.AccountsConfig'
+    'Accounts.apps.AccountsConfig',
+    'Bills.apps.BillsConfig'
 ]
 
 MIDDLEWARE = [
